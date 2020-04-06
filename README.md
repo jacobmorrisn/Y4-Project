@@ -16,4 +16,43 @@ This notebook automatically downloads all of the desired sources the FIRST radio
 
 ### 2. View downloaded images, and manually select final data sample
 
+FITS images are 
+
+### 3. Simple geometric simulation of synthetic radio galaxy images
+
+
+
+### 4. Deep convolutional generative adversarial network (DCGAN)
+
+
+
+### 5. Classification CNN
+
+Combines all of the previous code to produce final results of the impact of synthetic training data on classification accuracy.
+
+
+## Work not included in the final report:
+
+### A. Regressive bending angle CNN classifier
+
+
+
+### B. Variation autoencoder (VAE)
+
+
+
+### C. Dataset size vs. classification performance
+
+
+
+## Future work:
+
+### i. Image size vs. classification performance
+
+### ii. DCGAN for higher resolution image generation
+
+### iii. CNN classifier model architecture optimisation
+
+
+
 
