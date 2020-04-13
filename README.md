@@ -36,8 +36,9 @@ Program to create simple synthetic radio galaxy images. Program is based on usin
 
 ### 4. Deep convolutional generative adversarial network (DCGAN)
 
-**Code:** dcgan.ipynb
-          dcgan_bluebear.py
+**Code:**  
+dcgan.ipynb  
+dcgan_bluebear.py
 
 DCGANs are another method of creating synthetic training data. They are a generative modelling technique, using two competing neural networks to improve the performance of both. The generator neural network aims to recieve noise and output an image resmebling the training data. Saving the trained generator model, and using randomly generated noise vectors allows us to create a dataset of the synthetic images. A training GIF is also created, showing the training / learning process of the GAN. 
 
