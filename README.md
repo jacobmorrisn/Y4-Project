@@ -74,15 +74,15 @@ I have created a folder containing the work achieved in semester 1. Most of the 
 
 ### i. Image size vs. classification performance
 
-In order to use the GAN synthetic images in the CNN classifier the real images needed to be resized from 150x150 to 56x56 to match the size of the GAN images. This is far from ideal since a lot of spatial information of the sources is lost when downsampling. The final accuracy of the model was also only able to achieve ~91% accuracies, whereas accuracies ~98% were reported in Alhassan (2017) - this is most likely due to the downsampling. This notebook explores the classification performance achieved when resizing the training images to different sizes.
+In order to use the GAN synthetic images in the CNN classifier the real images needed to be resized from 150x150 to 56x56 to match the size of the GAN images. This is far from ideal since a lot of spatial information of the sources is lost when downsampling. The final accuracy of the model was also only able to achieve ~91% accuracies, whereas accuracies ~98% were reported in Alhassan (2017) - this is most likely due to the downsampling. Want to explore the classification performance achieved when resizing the training images to different sizes.
 
 ### ii. DCGAN for higher resolution image generation
 
-This notebook aims to generate higher resolution GAN images. This is mainly achieved through changing the generator and discriminator network architectures to accomate larger images.
+Generate higher resolution GAN images. This is mainly achieved through changing the generator and discriminator network architectures to accomate larger images.
 
 ### iii. CNN classifier model architecture optimisation
 
-The classification CNN architecture used in this study was based of the achitecture proposed in Alhassan (2017), since it was proven to achieve high classification accuracies for this problem. However, here a more rigorous approach is used to find the optimal model archiecture for this problem.
+The classification CNN architecture used in this study was based of the achitecture proposed in Alhassan (2017), since it was proven to achieve high classification accuracies for this problem. However, here is a more rigorous approach is used to find the optimal model archiecture for this problem.
 
 Start with a simple CNN, and continue to add convolution and pooling layers until the model starts to overfit. Overfitting can always be reduced at the end using regularization techniques. Use classic networks as inspiration when building the model, i.e. follow the same conv-pool-conv trends, as well as trends in channel and filter sizes. Then create a sample of several different CNN architecures. Train each and select the top performing one or two archiectures to hyper-parameter optimisation on (top-performing = best validation accuracy). 
 
@@ -94,6 +94,6 @@ VAEs are another generative modelling technique, similar to GANs, which can be u
 
 ### v. Dataset size vs. classification performance
 
-This notebook aims to explore how the number of images in a training dataset affects the classification performance of the network. The first thing explored is how the number of augmentations affects the model accuracy, in order to find out how much a dataset should be augmented by in order to optimise performance. The second thing is to keep the number of augmentations constant but vary the number of real images that are in the training set to be augmented, this can be used as a measure of how much real labelled data is needed to successfully train a classification model.
+Explore how the number of images in a training dataset affects the classification performance of the network. First explore how the number of augmentations affects the model accuracy, in order to find out how much a dataset should be augmented by in order to optimise performance. Then keep the number of augmentations constant but vary the number of real images that are in the training set to be augmented, this can be used as a measure of how much real labelled data is needed to successfully train a classification model.
 
 
