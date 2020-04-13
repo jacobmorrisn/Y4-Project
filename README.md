@@ -63,19 +63,7 @@ The CNN model was trained using an augmented dataset of flipped and rotated imag
 
 Synthetic data was then also used to try to improve the model's performance. In this case the data needed to be labelled by the bending angle, GANs are not able to do this, however the geometric simulation is. Using a combined dataset of real and synthetic images was able to reduce the validation error of the model, however the training error was increased.
 
-### B. Variation autoencoder (VAE)
-
-**Code:** vae.ipynb
-
-VAEs are another generative modelling technique, similar to GANs, which can be used to create synthetic data that resembles the underlying distribution of the training dataset.
-
-### C. Dataset size vs. classification performance
-
-**Code:** dataset_size_test.ipynb
-
-This notebook aims to explore how the number of images in a training dataset affects the classification performance of the network. The first thing explored is how the number of augmentations affects the model accuracy, in order to find out how much a dataset should be augmented by in order to optimise performance. The second thing is to keep the number of augmentations constant but vary the number of real images that are in the training set to be augmented, this can be used as a measure of how much real labelled data is needed to successfully train a classification model.
-
-### D. Semester 1 work
+### B. Semester 1 work
 
 I have created a folder containing the work achieved in semester 1. Most of the work here is a bit redundant now, since this work was improved upon during semester 2.
 
@@ -85,13 +73,9 @@ I have created a folder containing the work achieved in semester 1. Most of the 
 
 ### i. Image size vs. classification performance
 
-**Code:** image_size_test.ipynb
-
 In order to use the GAN synthetic images in the CNN classifier the real images needed to be resized from 150x150 to 56x56 to match the size of the GAN images. This is far from ideal since a lot of spatial information of the sources is lost when downsampling. The final accuracy of the model was also only able to achieve ~91% accuracies, whereas accuracies ~98% were reported in Alhassan (2017) - this is most likely due to the downsampling. This notebook explores the classification performance achieved when resizing the training images to different sizes.
 
 ### ii. DCGAN for higher resolution image generation
-
-**Code:** dcgan_testing.ipynb
 
 This notebook aims to generate higher resolution GAN images. This is mainly achieved through changing the generator and discriminator network architectures to accomate larger images.
 
@@ -102,5 +86,13 @@ The classification CNN architecture used in this study was based of the achitect
 Start with a simple CNN, and continue to add convolution and pooling layers until the model starts to overfit. Overfitting can always be reduced at the end using regularization techniques. Use classic networks as inspiration when building the model, i.e. follow the same conv-pool-conv trends, as well as trends in channel and filter sizes. Then create a sample of several different CNN architecures. Train each and select the top performing one or two archiectures to hyper-parameter optimisation on (top-performing = best validation accuracy). 
 
 Hyperparameter optimisation can be implemented using the hyperas library (simple hyperopt wrapper for keras). We need to define some functions to describe which parameters we want to optimise and the range of these parameters to test, i.e. the dropout rates, number of channels, strides, kernal size, learning rate. The best performing runs of the model can then be used to find the optimal values for each hyperparameter, and to define the final CNN architecture. 
+
+### iv. Variation autoencoder (VAE)
+
+VAEs are another generative modelling technique, similar to GANs, which can be used to create synthetic data that resembles the underlying distribution of the training dataset.
+
+### v. Dataset size vs. classification performance
+
+This notebook aims to explore how the number of images in a training dataset affects the classification performance of the network. The first thing explored is how the number of augmentations affects the model accuracy, in order to find out how much a dataset should be augmented by in order to optimise performance. The second thing is to keep the number of augmentations constant but vary the number of real images that are in the training set to be augmented, this can be used as a measure of how much real labelled data is needed to successfully train a classification model.
 
 
