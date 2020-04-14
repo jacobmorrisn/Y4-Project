@@ -62,7 +62,7 @@ Here I wanted to explore a regressive CNN instead of a classification CNN. The m
 
 The CNN model was trained using an augmented dataset of flipped and rotated images. Metrics showing the mean squared error and mean absolute error of the model at each epoch were plotted showing the model improvement during training. Several other plots to visualise the model performance were also shown. 
 
-Synthetic data was then also used to try to improve the model's performance. In this case the data needed to be labelled by the bending angle, GANs are not able to do this, however the geometric simulation is. Using a combined dataset of real and synthetic images was able to reduce the validation error of the model, however the training error was increased.
+Synthetic data was then also used to try to improve the model's performance. In this case the data needed to be labelled by the bending angle, GANs are not able to do this, however the geometric simulation is. Using a combined dataset of real and synthetic images was able to reduce / not really impact the validation error of the model, however the training error was increased.
 
 ### B. Semester 1 work
 
